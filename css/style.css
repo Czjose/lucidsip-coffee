@@ -1,0 +1,224 @@
+/*  ESTILOS BASE  */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  overflow-x: hidden; /* Evita scroll horizontal */
+}
+
+/* Contenedor principal sin márgenes para ocupar todo el ancho */
+.container {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*  ENCABEZADO  */
+header {
+  background-color: #fdf9f5;
+  padding: 0px;
+  /* Animación: Header aparece suavemente */
+  animation: fadeIn 0.6s ease-out;
+}
+
+header .container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+  gap: 20px;
+  width: 100%;
+}
+
+/*  LOGO  */
+.logo {
+  position: relative;
+  z-index: 2;
+}
+
+.logo img {
+  height: 80px;
+  display: block;
+}
+
+/* Mancha decorativa detrás del logo */
+.logo::before {
+  content: "";
+  position: absolute;
+  top: -70px;
+  left: -170px;
+  width: 350px;
+  height: 350px;
+  background-image: url(../assets/mancha-Photoroom.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+  transform: rotate(10deg);
+   /* Animación: Mancha flota suavemente */
+  animation: rotateFloat 3s ease-in-out infinite;
+}
+
+/*NAVEGACIÓN */
+.nav-container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: space-between;
+  padding-right: 55px;
+  /* Animación: Navegación aparece con ligero retraso */
+  animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+/* Menú izquierdo */
+.menu-left {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  justify-content: flex-start;
+}
+
+/* Menú derecho (carrito) */
+.menu-right {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 0;
+}
+
+/* Enlaces del menú */
+.menu-left li a,
+.menu-right li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  /* Transición suave para efectos hover */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto hover en enlaces */
+.menu-left li a:hover,
+.menu-right li a:hover {
+  background-color: #9e714c;
+  /* Animación: Ligera elevación al pasar el mouse */
+  transform: translateY(-1px);
+}
+
+/* Estilo del enlace activo */
+.menu-left li a.activo {
+  background-color: #9e714c;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* Estilo específico del carrito */
+.menu-right li a {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+/*SECCIÓN PRINCIPAL  */
+.bienvenida {
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  background-image: url(../assets/fondo.jpeg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Título principal */
+.bienvenida h1 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Animación: Título aparece suavemente */
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Párrafos */
+.bienvenida p {
+  font-size: 1.2rem;
+  color: #f0f0f0;
+  max-width: 600px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  /* Animación: Párrafos aparecen con retraso sutil */
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+/* Botón principal */
+.boton {
+  display: inline-block;
+  background-color: #a0522d;
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  /* Animación: Botón aparece al final */
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+/* Efecto hover del botón */
+.boton:hover {
+  background-color: #874c1c;
+  /* Animación: Ligera elevación al pasar el mouse */
+  transform: translateY(-2px);
+}
+
+/* PIE DE PÁGINA */
+footer {
+  background-color: #f9f5ee;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* ANIMACIONES CSS */
+
+/* Animación: Aparición suave general */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animación: Aparición suave con movimiento hacia arriba */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Animación: Mancha flota suavemente */
+@keyframes rotateFloat {
+  0%, 100% {
+    transform: rotate(10deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(15deg) translateY(-5px);
+  }
+}

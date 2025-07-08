@@ -1,0 +1,95 @@
+.contacto {
+  padding: 60px 20px;
+  background-color: #f9f5ee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.formulario-container {
+  max-width: 500px;
+  width: 100%;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.formulario-container h1 {
+  color: #5a3a1a;
+  margin-bottom: 10px;
+}
+
+.formulario-container p {
+  color: #7d6b52;
+  margin-bottom: 20px;
+}
+
+.formulario-contacto label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.formulario-contacto button {
+  background-color: #a0522d;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-contacto button:hover {
+  background-color: #874c1c;
+}
+.redes-sociales {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.redes-sociales h3 {
+  color: #5a3a1a;
+  margin-bottom: 15px;
+}
+
+/* Enlaces de redes con íconos y texto alineados */
+.red-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  color: #a0522d;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.red-link:hover {
+  text-decoration: underline;
+}
+
+/* Tamaño más pequeño para que no opaquen el texto */
+.icono-red {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.icono-red:hover {
+  transform: scale(1.2);
+}
